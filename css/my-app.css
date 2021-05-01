@@ -1,0 +1,84 @@
+.cart-nav-btn {
+    padding-right: 54px;
+    color: white;
+}
+
+.profile-nav-btn {
+    padding-right: 16px;
+    color: white;
+}
+
+.app-name {
+    margin-left: 16px;
+}
+
+.card-backdrop {
+    backdrop-filter: none;
+}
+
+/* A bit of demo styles */
+.demo-swiper .swiper-slide {
+    font-size: 25px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.demo-swiper .swiper-slide {
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+}
+
+.demo-swiper {
+    margin: 0px 0 35px;
+    font-size: 18px;
+    height: 120px;
+}
+
+.demo-swiper.demo-swiper-auto .swiper-slide {
+    width: 85%;
+}
+
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+    width: 70%;
+}
+
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+    width: 30%;
+}
+
+:root {
+    --f7-sheet-height: 260px;
+    --f7-sheet-border-color: transparent;
+    --f7-sheet-transition-duration: 300ms;
+    --f7-sheet-push-border-radius: 10px;
+    --f7-sheet-push-offset: var(--f7-safe-area-top);
+    --f7-sheet-bg-color: #fff;
+}
+
+:root .theme-dark,
+:root.theme-dark {
+    --f7-sheet-bg-color: #202020;
+}
+
+.ios {
+    --f7-sheet-border-color: var(--f7-bars-border-color);
+}
+
+/* css desktop view only */
+@media only screen and (min-width: 700px) {
+
+    .framework7-root,
+    body,
+    html {
+        margin: 0 auto;
+        max-width: 1280px;
+        width: 70%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: #ededed;
+    }
+}
