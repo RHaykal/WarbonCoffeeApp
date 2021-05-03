@@ -1,3 +1,10 @@
+<!-- CATATAN FRONT-END YG BELUM SELESAI
+BUTTON SIGN UP DARI MODAL LOGIN (BUG)
+HALAMAN PRODUK PER KATEGORI UNTUK TAB-1
+HALAMAN PERPRODUK UNTUK TAB-2
+HALAMAN PROFILE
+-->
+
 <!DOCTYPE html>
 <html>
 
@@ -51,21 +58,17 @@
         </div> -->
 
         <!-- Bottom Toolbar -->
-        <div class="toolbar tabbar tabbar-labels toolbar-bottom">
+        <div class="toolbar tabbar tabbar-labels toolbar-bottom toolbar:before" style="background-color: #0B764E;">
           <div class="toolbar-inner">
-            <a href="#tab-1" class="tab-link tab-link-active">
+            <a href="#tab-1" class="tab-link tab-link-active" style="color: whitesmoke; margin-top: 16px;">
               <!-- Different icons for iOS and MD themes -->
               <i class="icon f7-icons">house_fill</i>
-              <!-- Label text -->
-              <span class="tabbar-label">Home</span>
             </a>
-            <a href="#tab-2" class="tab-link">
+            <a href="#tab-2" class="tab-link" id="cart-button" style="color: whitesmoke; margin-top: 16px;">
               <i class="icon f7-icons">square_list_fill</i>
-              <span class="tabbar-label">Menu</span>
             </a>
-            <a href="#tab-3" class="tab-link">
+            <a href="#tab-3" class="tab-link" id="login-button" style="color:whitesmoke; margin-top: 16px;">
               <i class="icon f7-icons">layers_fill</i>
-              <span class="tabbar-label">Setting</span>
             </a>
           </div>
         </div>
@@ -84,10 +87,10 @@
                     <span class="text-color-white">Warbon Coffee</span>
                   </div>
                   <div class="right block col" style="height: 0px;">
-                    <a href="#">
+                    <a href="#" class="sheet-open" data-sheet=".my-sheet-swipe-to-step">
                       <i class="icon f7-icons right cart-nav-btn">cart_fill</i>
                     </a>
-                    <a href="#">
+                    <a href="#" class="login-screen-open" data-login-screen=".sign-in-screen">
                       <i class="icon f7-icons right profile-nav-btn">person_crop_circle</i>
                     </a>
                   </div>
@@ -116,7 +119,7 @@
                 <div class="section-1-title margin-left margin-bottom">
                   <div class="row">
                     <h2 style="margin-top: 0px; margin-bottom: 0px; color: #0B764E;">Black Coffee</h2>
-                    <a href="#">
+                    <a href="#tab-2-black-coffee-menu" class="link">
                       <i class="icon icon-forward" style="margin-top: 6px; color: #0B764E;"></i>
                     </a>
                   </div>
@@ -182,14 +185,16 @@
                     </div>
                   </div>
                 </div>
+
+
+
               </div>
             </div>
 
             <div id="tab-2" class="page-content tab" style="height: 100%;">
 
-
-              <form class="searchbar" style="width: 95.4%;">
-                <div class="searchbar-inner">
+              <!-- <form class="searchbar no-margin" style="width: 100%;">
+                <div class="searchbar-inner sliding">
                   <div class="searchbar-input-wrap">
                     <input type="search" placeholder="Search">
                     <i class="searchbar-icon"></i>
@@ -197,41 +202,78 @@
                   </div>
                   <span class="searchbar-disable-button if-not-aurora">Cancel</span>
                 </div>
-              </form>
+              </form> -->
+
+              <div class="navbar">
+                <div class="navbar-bg"></div>
+                <div class="navbar-inner" style="background-color: #0B764E;">
+                  <div class="title sliding" style="color: whitesmoke;">Menu</div>
+                  <div class="right">
+                    <a class="link icon-only searchbar-enable" data-searchbar=".searchbar">
+                      <i class="icon f7-icons" style="color: whitesmoke;">search</i>
+                    </a>
+                  </div>
+                  <div class="title-large">
+                    <div class="title">Framework7</div>
+                  </div>
+                  <form class="searchbar searchbar-expandable no-margin">
+                    <div class="searchbar-inner">
+                      <div class="searchbar-input-wrap">
+                        <input type="search" placeholder="Search">
+                        <i class="searchbar-icon"></i>
+                        <span class="input-clear-button"></span>
+                      </div>
+                      <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+                    </div>
+                  </form>
+                </div>
+              </div>
 
               <div class="list media-list searchbar-found">
-                <div class="block-title padding-left">Latte</div>
+                <div class="block-title padding-left searchbar-ignore" id="latte-menu">Latte</div>
                 <ul>
                   <li>
                     <a href="#" class="item-link item-content">
                       <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-1.jpg"
                           width="44" /></div>
                       <div class="item-inner">
-                        <div class="item-title-row">
+                        <div class="item-title">
                           <div class="item-title">Yellow Submarine</div>
                         </div>
                         <div class="item-subtitle">Beatles</div>
                       </div>
                     </a>
                   </li>
+                </ul>
+              </div>
+
+              <div class="list media-list searchbar-found">
+                <div class="block-title padding-left" id="tab-2-black-coffee-menu">Black Coffee</div>
+                <ul>
                   <li>
                     <a href="#" class="item-link item-content">
                       <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-2.jpg"
                           width="44" /></div>
                       <div class="item-inner">
-                        <div class="item-title-row">
+                        <div class="item-title">
                           <div class="item-title">Don't Stop Me Now</div>
                         </div>
                         <div class="item-subtitle">Queen</div>
                       </div>
                     </a>
                   </li>
+                </ul>
+              </div>
+
+              <div class="list media-list searchbar-found">
+                <div class="block-title padding-left" id="signature-menu">Signature</div>
+                <ul>
                   <li>
                     <a href="#" class="item-link item-content">
                       <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-3.jpg"
                           width="44" /></div>
                       <div class="item-inner">
-                        <div class="item-title-row">
+                        <div class="item-title">
                           <div class="item-title">Billie Jean</div>
                         </div>
                         <div class="item-subtitle">Michael Jackson</div>
@@ -242,38 +284,50 @@
               </div>
 
               <div class="list media-list searchbar-found">
-                <div class="block-title padding-left">Black Coffee</div>
+                <div class="block-title padding-left" id="latte-menu">Latte</div>
                 <ul>
                   <li>
                     <a href="#" class="item-link item-content">
                       <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-1.jpg"
                           width="44" /></div>
                       <div class="item-inner">
-                        <div class="item-title-row">
+                        <div class="item-title">
                           <div class="item-title">Yellow Submarine</div>
                         </div>
                         <div class="item-subtitle">Beatles</div>
                       </div>
                     </a>
                   </li>
+                </ul>
+              </div>
+
+              <div class="list media-list searchbar-found">
+                <div class="block-title padding-left" id="black-coffee-menu">Black Coffee</div>
+                <ul>
                   <li>
                     <a href="#" class="item-link item-content">
                       <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-2.jpg"
                           width="44" /></div>
                       <div class="item-inner">
-                        <div class="item-title-row">
+                        <div class="item-title">
                           <div class="item-title">Don't Stop Me Now</div>
                         </div>
                         <div class="item-subtitle">Queen</div>
                       </div>
                     </a>
                   </li>
+                </ul>
+              </div>
+
+              <div class="list media-list searchbar-found">
+                <div class="block-title padding-left" id="signature-menu">Signature</div>
+                <ul>
                   <li>
                     <a href="#" class="item-link item-content">
                       <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-3.jpg"
                           width="44" /></div>
                       <div class="item-inner">
-                        <div class="item-title-row">
+                        <div class="item-title">
                           <div class="item-title">Billie Jean</div>
                         </div>
                         <div class="item-subtitle">Michael Jackson</div>
@@ -283,47 +337,6 @@
                 </ul>
               </div>
 
-              <div class="list media-list searchbar-found">
-                <div class="block-title padding-left">Signature</div>
-                <ul>
-                  <li>
-                    <a href="#" class="item-link item-content">
-                      <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-1.jpg"
-                          width="44" /></div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Yellow Submarine</div>
-                        </div>
-                        <div class="item-subtitle">Beatles</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="item-link item-content">
-                      <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-2.jpg"
-                          width="44" /></div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Don't Stop Me Now</div>
-                        </div>
-                        <div class="item-subtitle">Queen</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="item-link item-content">
-                      <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-3.jpg"
-                          width="44" /></div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Billie Jean</div>
-                        </div>
-                        <div class="item-subtitle">Michael Jackson</div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
               <div class="block searchbar-not-found">
                 <div class="block-inner">Nothing found</div>
               </div>
@@ -331,6 +344,14 @@
             </div>
 
             <div id="tab-3" class="page-content tab">
+
+              <div class="navbar">
+                <div class="navbar-bg"></div>
+                <div class="navbar-inner" style="background-color: #0B764E;">
+                  <div class="title" style="color: whitesmoke;">Settings</div>
+                  <div class="right"></div>
+                </div>
+              </div>
 
               <div class="list media-list" style="margin-top: 0px; margin-bottom: 0px;">
                 <ul>
@@ -407,13 +428,158 @@
                 </ul>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
-
     </div>
+
+    <!-- Swipe to step sheet -->
+    <div class="sheet-modal my-sheet-swipe-to-step" style="height:auto; --f7-sheet-bg-color: #fff;">
+      <div class="sheet-modal-inner">
+        <div class="sheet-modal-swipe-step">
+          <div class="display-flex padding justify-content-space-between align-items-center">
+            <div style="font-size: 18px"><b>Total:</b></div>
+            <div style="font-size: 22px"><b>$500</b></div>
+          </div>
+          <div class="padding-horizontal padding-bottom">
+            <a class="button button-large button-fill" style="background-color: #0B764E;">Make Payment</a>
+            <div class="margin-top text-align-center">Swipe up for more details</div>
+          </div>
+        </div>
+        <div class="block-title block-title-medium margin-top">Your order:</div>
+        <div class="list no-hairlines">
+          <ul>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Item 1</div>
+                <div class="item-after text-color-black"><b>$200</b></div>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Item 2</div>
+                <div class="item-after text-color-black"><b>$180</b></div>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Delivery</div>
+                <div class="item-after text-color-black"><b>$120</b></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen Modal -->
+    <div class="login-screen sign-in-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="logo">
+              <center>
+                <img src="img/logo.png" alt="Logo">
+              </center>
+            </div>
+            <div class="login-screen-title">Warbon App</div>
+            <form>
+              <div class="list">
+                <ul>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Username</div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="username" placeholder="Your username" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Password</div>
+                      <div class="item-input-wrap">
+                        <input type="password" name="password" placeholder="Your password" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list">
+                <ul>
+                  <li>
+                    <center>
+                      <a class="list-button button-fill"
+                        style="background-color: #0B764E; color: whitesmoke; border-radius: 50px; width: 200px;"
+                        href="#">Sign In</a>
+                    </center>
+                  </li>
+                </ul>
+                <div class="block-footer">
+                  <p>Don't have an account yet?</p>
+                  <p><a class="link" href="#" data-login-screen=".sign-up-screen" style="color: #0B764E;">Sign Up!</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen Modal -->
+    <div class="login-screen sign-up-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="logo">
+              <center>
+                <img src="img/logo.png" alt="Logo">
+              </center>
+            </div>
+            <div class="login-screen-title">Warbon App</div>
+            <form>
+              <div class="list">
+                <ul>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Username</div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="username" placeholder="Your username" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Password</div>
+                      <div class="item-input-wrap">
+                        <input type="password" name="password" placeholder="Your password" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list">
+                <ul>
+                  <li>
+                    <center>
+                      <a class="list-button button-fill"
+                        style="background-color: #0B764E; color: whitesmoke; border-radius: 50px; width: 200px;"
+                        href="#">Sign In</a>
+                    </center>
+                  </li>
+                </ul>
+                <div class="block-footer">
+                  <p>Don't have an account yet?</p>
+                  <p><a class="link" href="#" style="color: #0B764E;">Sign Up!</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
   </div>
   <!-- Path to Framework7 Library Bundle JS-->
@@ -422,6 +588,30 @@
   <!-- Path to your app js-->
   <script type="text/javascript" src="js/my-app.js"></script>
   <!-- <script type="text/javasxript" src="js/swiper.js"></script> -->
+  <script>
+    export default (props, ctx) => {
+      const {
+        $
+      } = ctx;
+      // Login Screen-Modal DOM events
+      $('.login-screen').on('loginscreen:open', function (e) {
+        console.log('Login screen open')
+      });
+      $('.login-screen').on('loginscreen:opened', function (e) {
+        console.log('Login screen opened')
+      });
+      $('.login-screen').on('loginscreen:close', function (e) {
+        console.log('Login screen close')
+      });
+      $('.login-screen').on('loginscreen:closed', function (e) {
+        console.log('Login screen closed')
+      });
+
+
+
+      return $render;
+    }
+  </script>
 </body>
 
 </html>
