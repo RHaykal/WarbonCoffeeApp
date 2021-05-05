@@ -1,5 +1,10 @@
 /* Theme Color is  #0B764E */
 
+img.profile-picture:hover {
+    background-color: #444;
+    opacity: 0.7;
+}
+
 :root {
     --f7-list-item-border-color: transparent;
 }
@@ -21,6 +26,99 @@
 .card-backdrop {
     backdrop-filter: none;
 }
+
+/*Stepper CSS Start!*/
+:root {
+    --f7-stepper-button-text-color: #0B764E;
+    --f7-stepper-button-pressed-text-color: white;
+    --f7-stepper-value-text-color: #0B764E;
+    --f7-stepper-fill-button-text-color: #fff;
+    --f7-stepper-fill-button-bg-color: #0B764E;
+    --f7-stepper-raised-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --f7-stepper-value-font-weight: 500;
+    --f7-stepper-border-width: 2px;
+}
+
+.ios {
+    --f7-stepper-height: 28px;
+    --f7-stepper-border-radius: 5px;
+    /*
+    --f7-stepper-button-pressed-bg-color: rgba(var(--f7-theme-color-rgb), .15);
+    --f7-stepper-fill-button-pressed-bg-color: var(--f7-theme-color-tint);
+    */
+    --f7-stepper-large-height: 44px;
+    --f7-stepper-small-height: 26px;
+    --f7-stepper-small-border-width: 2px;
+    --f7-stepper-value-font-size: 17px;
+}
+
+.md {
+    --f7-stepper-height: 36px;
+    --f7-stepper-border-radius: 4px;
+    /*
+    --f7-stepper-fill-button-pressed-bg-color: var(--f7-theme-color-shade);
+    */
+    --f7-stepper-large-height: 48px;
+    --f7-stepper-small-border-width: 2px;
+    --f7-stepper-small-height: 28px;
+    --f7-stepper-value-font-size: 14px;
+    --f7-stepper-button-pressed-bg-color: rgba(0, 0, 0, 0.1);
+}
+
+.md .theme-dark,
+.md.theme-dark {
+    --f7-stepper-button-pressed-bg-color: rgba(255, 255, 255, 0.1);
+}
+
+.aurora {
+    /*
+    --f7-stepper-button-hover-bg-color: rgba(var(--f7-theme-color-rgb), .07);
+    --f7-stepper-button-fill-hover-bg-color: var(--f7-theme-color-tint);
+    */
+    --f7-stepper-height: 28px;
+    --f7-stepper-border-radius: 4px;
+    /*
+    --f7-stepper-button-pressed-bg-color: rgba(var(--f7-theme-color-rgb), .15);
+    --f7-stepper-fill-button-pressed-bg-color: var(--f7-theme-color-shade);
+    */
+    --f7-stepper-large-height: 34px;
+    --f7-stepper-small-border-width: 1px;
+    --f7-stepper-small-height: 22px;
+    --f7-stepper-value-font-size: 14px;
+}
+
+/*Stepper CSS End!*/
+
+/*Input CSS Start!*/
+:root {
+    --f7-input-bg-color: transparent;
+    --f7-label-font-weight: 400;
+    --f7-label-line-height: 1.3;
+    --f7-input-padding-left: 0px;
+    --f7-input-padding-right: 0px;
+    --f7-input-error-text-color: #ff3b30;
+    --f7-input-error-font-size: 12px;
+    --f7-input-error-line-height: 1.4;
+    --f7-input-error-font-weight: 400;
+    --f7-input-info-font-size: 12px;
+    --f7-input-info-line-height: 1.4;
+    --f7-input-outline-height: 40px;
+    --f7-input-outline-border-radius: 4px;
+    --f7-input-outline-padding-horizontal: 12px;
+    --f7-textarea-height: 100px;
+    /*  
+    --f7-input-outline-focused-border-color: var(--f7-theme-color);
+    --f7-input-outline-invalid-border-color: var(--f7-input-error-text-color);
+    */
+    --f7-input-outline-border-color: #bbb;
+}
+
+:root .theme-dark,
+:root.theme-dark {
+    --f7-input-outline-border-color: #444;
+}
+
+/*Input CSS End!*/
 
 /* Bottom Tabbar CSS Start!  */
 :root {

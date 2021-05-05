@@ -11,15 +11,24 @@ var app = new Framework7({
     panel: {
       swipe: false,
     },
+    views: {
+      stackPages: true,
+    },
     // Add default routes
     routes: [
       {
-        path: '/about/',
-        url: 'about.html',
+        path: '/home/',
+        pageName: 'home',
       },
+
       {
-        path: '/login-screen/',
-        componentUrl: './login-screen.html',
+        path: '/category-page/',
+        pageName: 'category-page',
+      },
+
+      {
+        path: '/product-page/',
+        pageName: 'product-page',
       },
     ],
     // ... other parameters
