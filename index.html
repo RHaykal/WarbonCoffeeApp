@@ -1,5 +1,8 @@
 <!-- CATATAN FRONT-END YG BELUM SELESAI
-Routes
+Routes(BUG)
+HOT N COLD BUTTON GAMAU GANTI BG COLOR
+MAKE THE PAGE CONTENT RESPONSIVE IN PRODUCT-PAGE
+BUTTON TO EDIT PROFILE INFORMATION IN TAB-3
 -->
 
 <!DOCTYPE html>
@@ -184,16 +187,6 @@ Routes
                     </div>
                   </div>
                 </div>
-                <div class="stepper stepper-fill stepper-init block" data-autorepeat="true"
-                  data-autorepeat-dynamic="true" data-decimal-point="2" data-manual-input-mode="true">
-                  <div class="stepper-button-minus" style="border-color: #0B764E;"></div>
-                  <div class="stepper-input-wrap" style="border-color: #0B764E;">
-                    <input type="text" value="0" min="0" max="100" step="1">
-                  </div>
-                  <div class="stepper-button-plus" style="border-color: #0B764E;"></div>
-                </div>
-
-
 
               </div>
             </div>
@@ -428,6 +421,8 @@ Routes
         </div>
       </div>
 
+      <!--Sheet Modal Start!-->
+
       <!-- Swipe to step sheet -->
       <div class="sheet-modal my-sheet-swipe-to-step" style="height:auto; --f7-sheet-bg-color: #fff;">
         <div class="sheet-modal-inner">
@@ -437,7 +432,8 @@ Routes
               <div style="font-size: 22px"><b>$500</b></div>
             </div>
             <div class="padding-horizontal padding-bottom">
-              <a class="button button-large button-fill" style="background-color: #0B764E;">Make Payment</a>
+              <a href="#" class="button button-large button-fill sheet-close popup-open"
+                data-popup=".popup-swipe-to-close" style="background-color: #0B764E;">Make Payment</a>
               <div class="margin-top text-align-center">Swipe up for more details</div>
             </div>
           </div>
@@ -601,7 +597,9 @@ Routes
           </div>
         </div>
       </div>
+      <!--Sheet Modal End!-->
 
+      <!--Stacked Page Content!-->
       <div class="page stacked" data-name="category-page">
 
         <!--Navbar Start!-->
@@ -623,7 +621,7 @@ Routes
         <div class="list media-list" style="margin-top: 64px;">
           <ul>
             <li>
-              <a href="/product-page/" class="item-link item-content">
+              <a href="#" class="item-link item-content">
                 <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-1.jpg"
                     width="44" /></div>
                 <div class="item-inner">
@@ -667,31 +665,135 @@ Routes
 
       </div>
 
+
       <div class="page stacked" data-name="product-page">
 
-        <!--Navbar Start!-->
-        <!-- <div class="navbar">
-          <div class="navbar-bg"></div>
-          <div class="navbar-inner" style="background-color: #0B764E;">
-            <div class="left">
-              <a href="/home/" class="link no-padding-right">
-                <i class="icon icon-back" style="color: whitesmoke;"></i>
-              </a>
+        <div class="product-image" style="height: 490px; width: 100%;">
+
+          <!--element on image start!-->
+          <a href="/home/" class="link margin-left margin-top" style="position: absolute;">
+            <i class="icon icon-back" style="color: #fff;"></i>
+          </a>
+          <h1 class="margin-left" style="position: absolute; margin-top: 384px; color: whitesmoke;"><b>Cappucino</b></b>
+          </h1>
+          <p class="subtitle margin-left" style="color: whitesmoke; position: absolute; margin-top: 422px;">a mix of
+            milk and coffee with creamy foam
+            on top</p>
+          <!--element on image end!-->
+
+          <!--modal looking bottom menu start!-->
+          <div
+            style="margin-top: 460px; background-color: whitesmoke; height: 190px; width: 100%; border-radius: 20px; position: absolute;">
+
+            <center>
+              <p>Quantity</p>
+            </center>
+
+            <div class="row no-gap ">
+              <label for="cold-varian" class="col-33 button varian center"
+                style="border-color: #0B764E; color: #0B764E; width: 60px; border-radius: 20px; margin-left: 40px;">
+                <input type="radio" name="varian" value="cold" class="varian-button">Cold
+              </label>
+
+              <div class="col-33 stepper stepper-fill stepper-init block no-margin-top no-padding center"
+                style="margin-right: 2px;" data-autorepeat="true" data-autorepeat-dynamic="true" data-decimal-point="2"
+                data-manual-input-mode="true">
+                <div class="stepper-button-minus" style="border-color: #0B764E;"></div>
+                <div class="stepper-input-wrap" style="border-color: #0B764E;">
+                  <input type="text" value="0" min="0" max="100" step="1">
+                </div>
+                <div class="stepper-button-plus" style="border-color: #0B764E;"></div>
+              </div>
+
+              <label for="hot-varian" class="col-33 button varian center"
+                style="border-color: #0B764E; color: #0B764E; width: 60px; border-radius: 20px; margin-right: 40px;">
+                <input type="radio" name="varian" value="hot" class="varian-button">Hot
+              </label>
             </div>
-            <div class="title" style="color: whitesmoke;">Macha Latte</div>
-            <div class="right"></div>
-          </div>
-        </div> -->
-        <!--Navbar End!-->
 
-        <a href="/home/" class="link">
-          <div class="left margin-left margin-top">
-            <i class="icon icon-back" style="color: #0B764E;"></i>
-          </div>
-        </a>
+            <p class="row">
+              <a href="#" class="col-50 button button-outline button-raised margin-left sheet-open"
+                data-sheet=".my-sheet-swipe-to-step" style="width: 150px; border-color: #0B764E; color: #0B764E;">Add to
+                Cart</a>
+              <a href="#" data-sheet="" class="col-50 button button-raised button-fill margin-right popup-open"
+                data-popup=".popup-swipe-to-close" style="width: 150px; background-color: #0B764E;">Buy!</a>
+            </p>
+            <!--modal looking bottom menu end!-->
 
+          </div>
+          <img src="img/co3.jpg" alt="kopi" style="height: 490px; width: 100%;">
+
+        </div>
 
       </div>
+
+      <!--Stacked Page Content End!-->
+
+      <!--Popup Payment Start!-->
+      <div class="popup popup-swipe-to-close">
+        <div class="block">
+          <p class="text-align-center" style="font-size: 22px;">Order Form</p>
+          <form class="list no-margin" id="order-form">
+            <div class="list no-margin-top">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Name</div>
+                    <div class="item-input-wrap">
+                      <input type="text" placeholder="Your name">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div style="height: 1.3px; width: 100%; background-color: #808080; opacity: 0.3;"></div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">E-mail</div>
+                    <div class="item-input-wrap">
+                      <input type="email" placeholder="Your e-mail">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div style="height: 1.3px; width: 100%; background-color: #808080; opacity: 0.3;"></div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Phone Number</div>
+                    <div class="item-input-wrap">
+                      <input type="tel" placeholder="Your phone number">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div style="height: 1.3px; width: 100%; background-color: #808080; opacity: 0.3;"></div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Address</div>
+                    <div class="item-input-wrap">
+                      <textarea name="address" placeholder="Your Address"></textarea>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </form>
+
+          <div class="list simple-list no-margin-top" style="height: 90px; overflow-y: auto;">
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+
+          <a class="button button-large button-fill" style="background-color: #0B764E;">Make Payment</a>
+
+        </div>
+      </div>
+      <!--Popup Payment End!-->
 
     </div>
   </div>
@@ -700,7 +802,6 @@ Routes
   <script type="text/javascript" src="js/framework7.bundle.min.js"></script>
   <!-- Path to your app js-->
   <script type="text/javascript" src="js/my-app.js"></script>
-  <!-- <script type="text/javasxript" src="js/swiper.js"></script> -->
   <!--Path to Routes js-->
   <script type="text/javascript" src="js/routes.js"></script>
   <script>

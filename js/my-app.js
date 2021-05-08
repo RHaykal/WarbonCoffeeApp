@@ -34,6 +34,21 @@ var app = new Framework7({
     // ... other parameters
   });
 
+//create popup
+// DOM events for About popup
+$$('.popup-about').on('popup:open', function (e) {
+  console.log('About popup open');
+});
+$$('.popup-about').on('popup:opened', function (e) {
+  console.log('About popup opened');
+});
+
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.popup-swipe-to-close',
+  swipeToClose: true,
+});
+
   // create searchbar
   var searchbar = app.searchbar.create({
     el: '.searchbar',
