@@ -1,0 +1,62 @@
+<div class="page" data-name="product-page">
+
+    <div class="product-image" style="height: 490px; width: 100%;">
+
+        <!--element on image start!-->
+        <a href="/home/" class="link margin-left margin-top" style="position: absolute;">
+            <i class="icon icon-back" style="color: #fff;"></i>
+        </a>
+        <h1 class="margin-left" id="prod-title" style="position: absolute; margin-top: 384px; color: whitesmoke;">
+            <b>Cappucino</b></b>
+        </h1>
+        <p class="subtitle margin-left" id="prod-subtitle"
+            style="color: whitesmoke; position: absolute; margin-top: 422px;">a mix of
+            milk and coffee with creamy foam
+            on top</p>
+        <!--element on image end!-->
+
+        <!--modal looking bottom menu start!-->
+        <div
+            style="margin-top: 460px; background-color: whitesmoke; height: 190px; width: 100%; border-radius: 20px; position: absolute;">
+
+            <center>
+                <p>Quantity</p>
+            </center>
+
+            <div class="row no-gap ">
+                <label for="cold-varian" id="cold-varian" class="col-33 button varian center"
+                    style="border-color: #0B764E; color: #0B764E; width: 60px; border-radius: 20px; margin-left: 40px;">
+                    <input id="variancold" type="radio" value="cold" class="varian-button">Cold
+                </label>
+
+                <div class="col-33 stepper stepper-fill stepper-init block no-margin-top no-padding center"
+                    style="margin-right: 2px;" data-autorepeat="true" data-autorepeat-dynamic="true"
+                    data-decimal-point="2" data-manual-input-mode="true">
+                    <div class="stepper-button-minus" style="border-color: #0B764E;"></div>
+                    <div class="stepper-input-wrap" style="border-color: #0B764E;">
+                        <input id="quantity" type="number" value="1" min="1" max="100" step="1">
+                    </div>
+                    <div class="stepper-button-plus" style="border-color: #0B764E;"></div>
+                </div>
+
+                <label for="hot-varian" id="hot-varian" class="col-33 button varian center"
+                    style="border-color: #0B764E; color: #0B764E; width: 60px; border-radius: 20px; margin-right: 40px;">
+                    <input id="varianhot" type="radio" value="hot" class="varian-button">Hot
+                </label>
+            </div>
+
+            <p class="row">
+                <a href="#" id="add-to-cart" class="col-50 button button-outline button-raised margin-left"
+                    style="width: 150px; border-color: #0B764E; color: #0B764E;">Add to
+                    Cart</a>
+                <a href="#" id="buy" class="col-50 button button-raised button-fill margin-right "
+                    style="width: 150px; background-color: #0B764E;">Buy!</a>
+            </p>
+            <!--modal looking bottom menu end!-->
+
+        </div>
+        <img src="img/co3.jpg" alt="kopi" style="height: 490px; width: 100%;">
+
+    </div>
+
+</div>
