@@ -45,6 +45,15 @@ img.profile-picture:hover {
     backdrop-filter: none;
 }
 
+/*toastTop costum css*/
+.md {
+    --f7-toast-bg-color: #0B764E;
+    --f7-toast-padding-horizontal: 24px;
+    --f7-toast-padding-vertical: 14px;
+    --f7-toast-border-radius: 4px;
+    --f7-toast-button-min-width: 64px;
+}
+
 /*Stepper CSS Start!*/
 :root {
     --f7-stepper-button-text-color: #0B764E;
